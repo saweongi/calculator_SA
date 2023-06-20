@@ -12,7 +12,7 @@ class Calculator(QWidget):
         self.resize(256,256)
         self.show()
 
-if __name__ =='__main__':
+if __name__ =='__main__': # 이 파일을 직접 실행할 시에만 명령을 수행하겠다!.
     app = QApplication(sys.argv)
     view = Calculator()
     sys.exit(app.exec_())
