@@ -4,6 +4,7 @@ from PyQt5.QtWidgets import (QApplication,
                              QMessageBox, QPlainTextEdit, QHBoxLayout)
 from PyQt5.QtGui import QIcon
 import random 
+from prompt import sayHello
 
 
 
@@ -49,6 +50,7 @@ class Calculator(QWidget):
         self.te1.clear()
 
 if __name__ =='__main__': # 이 파일을 직접 실행할 시에만 명령을 수행하겠다!.
+    sayHello()
     app = QApplication(sys.argv)
     view = Calculator()
     sys.exit(app.exec_())
