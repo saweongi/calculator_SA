@@ -1,8 +1,7 @@
 import sys 
 from PyQt5.QtWidgets import (QApplication, 
                              QWidget,QPushButton,QVBoxLayout,
-                             QMessageBox, QPlainTextEdit, QHBoxLayout, QLabel)
-from PyQt5.QtCore import QDate, Qt
+                             QMessageBox, QPlainTextEdit, QHBoxLayout)
 from PyQt5.QtGui import QIcon
 import random 
 from prompt import sayHello
@@ -13,11 +12,9 @@ class Calculator(QWidget):
     
     def __init__(self):
         super().__init__()
-        self.date = QDate.currentDate()
         self.initUI()
 
     def initUI(self):
-        self.lal1 = QLabel(self.date.toString(Qt.DefaultLocaleLongDate),self)
         self.te1 = QPlainTextEdit()
         self.te1.setReadOnly(True)
 
@@ -35,7 +32,7 @@ class Calculator(QWidget):
         vbox = QVBoxLayout()
         vbox.addWidget(self.te1)
         vbox.addLayout(hbox)
-        vbox.addWidget(self.lal1)
+        vbox.addStretch(1)
 
 
         self.setLayout(vbox)
